@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+group = 'org.cha2code'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Cache, 고정 결과값을 서버에서 Cache 처리 하기 위해 사용
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+    // Thymeleaf 및 Spring Security용 DSL
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // ThymeLeaf Layout
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
+    // Spring 프로퍼티 자동완성
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+
+    // JSR 310
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
+    implementation 'junit:junit:4.13.1'
+
+    // Lombok, 보일러 플레이트 생략용
+    compileOnly 'org.projectlombok:lombok'
+
+    // Devtools, 디버그 모드시 클래스 변경사항 hotswap 가능
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
