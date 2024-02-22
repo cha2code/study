@@ -10,4 +10,9 @@ public class CommonController {
 	public String basic() {
 		return "basic";
 	}
+
+	@GetMapping("/complex")
+	public String complex() {
+		return "complexColumns";
+	}
 }
