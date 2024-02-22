@@ -20,4 +20,9 @@ public class CommonController {
 	public String custom() {
 		return "customEditor";
 	}
+
+	@GetMapping("/renderer")
+	public String renderer() {
+		return "customRenderer";
+	}
 }
