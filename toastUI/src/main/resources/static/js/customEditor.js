@@ -10,6 +10,7 @@ class CustomTextEditor {
         const {maxLength} = props.columnInfo.editor.options;
 
         el.type = 'text';
+        el.maxLength = maxLength;
         el.value = String(props.value);
 
         this.el = el;
