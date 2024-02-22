@@ -15,4 +15,9 @@ public class CommonController {
 	public String complex() {
 		return "complexColumns";
 	}
+
+	@GetMapping("/custom")
+	public String custom() {
+		return "customEditor";
+	}
 }
