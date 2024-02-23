@@ -40,4 +40,9 @@ public class CommonController {
 	public String datePicker() {
 		return "datePicker";
 	}
+
+	@GetMapping("/summary")
+	public String summary() {
+		return "summary";
+	}
 }
