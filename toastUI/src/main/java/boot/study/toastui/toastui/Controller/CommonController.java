@@ -35,4 +35,9 @@ public class CommonController {
 	public String themes() {
 		return "themes";
 	}
+
+	@GetMapping("/datePicker")
+	public String datePicker() {
+		return "datePicker";
+	}
 }
