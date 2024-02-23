@@ -30,4 +30,9 @@ public class CommonController {
 	public String relation() {
 		return "relationBetweenColumns";
 	}
+
+	@GetMapping("/themes")
+	public String themes() {
+		return "themes";
+	}
 }
