@@ -25,4 +25,9 @@ public class CommonController {
 	public String renderer() {
 		return "customRenderer";
 	}
+
+	@GetMapping("/relation")
+	public String relation() {
+		return "relationBetweenColumns";
+	}
 }
